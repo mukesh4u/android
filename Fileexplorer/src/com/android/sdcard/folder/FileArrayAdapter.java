@@ -63,7 +63,15 @@ public class FileArrayAdapter extends ArrayAdapter<Albumb> {
 				imageCity.setImageDrawable(image);
 			} else {
 				Bitmap bmp = BitmapFactory.decodeFile(item.getPath());
-				imageCity.setImageBitmap(bmp);
+				if(bmp == null) {
+					String uri = "drawable/" + item.getImage();
+					int imageResource = c.getResources().getIdentifier(uri, null,
+							c.getPackageName());
+					Drawable image = c.getResources().getDrawable(imageResource);
+					imageCity.setImageDrawable(image);
+				} else {
+					imageCity.setImageBitmap(bmp);
+				}
 			}
 			if (t1 != null)
 				t1.setText(item.getName());
