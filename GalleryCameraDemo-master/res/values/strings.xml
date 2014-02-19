@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GalleryCameraDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="this_demo_shows">This demo shows how to interact with gallery and camera.</string>
+    <string name="pick_image">Pick an image or take a photo</string>
+    <string name="save_image_file">Save the image in a file into the SD</string>
+</resources>
